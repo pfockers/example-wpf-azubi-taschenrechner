@@ -11,21 +11,22 @@ namespace Taschenrechner_Own_MVVM.ViewModel
     using System.ComponentModel;
     using System.Globalization;
     using System.Windows.Input;
+    using Taschenrechner_Own_MVVM.Commands;
     using Taschenrechner_Own_MVVM.Model;
 
     public class CalculatorViewModel : INotifyPropertyChanged
     {
         #region Fields
 
-        private string _display = "";
+        private string myDisplay = "";
 
-        private bool _isNewInput = true;
+        private bool isNewInput = true;
 
         private readonly CalculatorModel _model = new();
 
-        private string _operator = "";
+        private string myOperator = "";
 
-        private double _zahl1 = 0;
+        private double numberOne;
 
         #endregion
 
@@ -35,11 +36,11 @@ namespace Taschenrechner_Own_MVVM.ViewModel
 
         public string Display
         {
-            get => _display;
+            get => this.myDisplay;
             set
             {
-                _display = value;
-                OnPropertyChanged(nameof(Display));
+                this.myDisplay = value;
+                this.OnPropertyChanged(nameof(CalculatorViewModel.Display));
             }
         }
 
@@ -63,11 +64,11 @@ namespace Taschenrechner_Own_MVVM.ViewModel
 
         public CalculatorViewModel()
         {
-            NumberCommand = new RelayCommand(param => AddNumber(param?.ToString() ?? ""));
-            OperatorCommand = new RelayCommand(param => SetOperator(param?.ToString() ?? ""));
-            EqualCommand = new RelayCommand(_ => Calculate());
-            ClearCommand = new RelayCommand(_ => Clear());
-            KommaCommand = new RelayCommand(_ => AddKomma());
+            this.NumberCommand = new RelayCommand(param => this.AddNumber(param?.ToString() ?? ""));
+            this.OperatorCommand = new RelayCommand(param => this.SetOperator(param?.ToString() ?? ""));
+            this.EqualCommand = new RelayCommand(_ => this.Calculate());
+            this.ClearCommand = new RelayCommand(_ => this.Clear());
+            this.KommaCommand = new RelayCommand(_ => this.AddKomma());
         }
 
         #endregion
@@ -76,20 +77,19 @@ namespace Taschenrechner_Own_MVVM.ViewModel
 
         private void AddKomma()
         {
-            if (!Display.Contains(","))
+            if (!this.Display.Contains(","))
             {
-                if (string.IsNullOrEmpty(Display))
-                    Display = "0";
-                Display += ",";
+                if (string.IsNullOrEmpty(this.Display)) this.Display = "0";
+                this.Display += ",";
             }
         }
 
         private void AddNumber(string number)
         {
-            if (_isNewInput)
+            if (this.isNewInput)
             {
-                Display = "";
-                _isNewInput = false;
+                this.Display = "";
+                this.isNewInput = false;
             }
 
             Display += number;
@@ -101,7 +101,7 @@ namespace Taschenrechner_Own_MVVM.ViewModel
             {
                 try
                 {
-                    var result = _model.Calculate(_zahl1, zahl2, _operator);
+                    var result = _model.Calculate(this.numberOne, zahl2, this.myOperator);
                     Display = result.ToString(CultureInfo.CurrentCulture);
                 }
                 catch (DivideByZeroException)
@@ -109,26 +109,26 @@ namespace Taschenrechner_Own_MVVM.ViewModel
                     Display = "Fehler: Division durch 0";
                 }
 
-                _isNewInput = true;
+                this.isNewInput = true;
             }
         }
 
         private void Clear()
         {
-            Display = "";
-            _zahl1 = 0;
-            _operator = "";
-            _isNewInput = true;
+            this.Display = "";
+            this.numberOne = 0;
+            this.myOperator = "";
+            this.isNewInput = true;
         }
 
         protected void OnPropertyChanged(string name) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 
         private void SetOperator(string op)
         {
-            if (double.TryParse(Display, out _zahl1))
+            if (double.TryParse(this.Display, out this.numberOne))
             {
-                _operator = op;
-                _isNewInput = true;
+                this.myOperator = op;
+                this.isNewInput = true;
             }
         }
 

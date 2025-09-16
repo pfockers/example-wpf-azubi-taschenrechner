@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="clr-namespace:Taschenrechner_Own_MVVM.ViewModel"
         Title="Taschenrechner"
-        Width="320"
-        Height="420"
+        Width="420"
+        Height="520"
         Background="#f4f6fb"
         FontFamily="Segoe UI"
         WindowStartupLocation="CenterScreen">
