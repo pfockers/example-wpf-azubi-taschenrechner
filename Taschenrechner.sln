@@ -2,7 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{60dc8134-eba5-43b8-bcc9-bb4bc16c2548}") = "Taschenrechner", "Taschenrechner\Taschenrechner.csproj", "{A5B64B7C-B2AD-4F4C-8E3B-0C5F1B8B1DE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taschenrechner_Own", "Taschenrechner_Own\Taschenrechner_Own.csproj", "{BC6B260A-8C71-4CE7-A9B3-A828717BCC89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taschenrechner_Own_MVVM", "Taschenrechner_Own_MVVM\Taschenrechner_Own_MVVM.csproj", "{EE06E8D1-31FC-4D4B-B767-6F55DCE31013}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,5 +16,19 @@ Global
 		{A5B64B7C-B2AD-4F4C-8E3B-0C5F1B8B1DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5B64B7C-B2AD-4F4C-8E3B-0C5F1B8B1DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5B64B7C-B2AD-4F4C-8E3B-0C5F1B8B1DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC6B260A-8C71-4CE7-A9B3-A828717BCC89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC6B260A-8C71-4CE7-A9B3-A828717BCC89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC6B260A-8C71-4CE7-A9B3-A828717BCC89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC6B260A-8C71-4CE7-A9B3-A828717BCC89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE06E8D1-31FC-4D4B-B767-6F55DCE31013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE06E8D1-31FC-4D4B-B767-6F55DCE31013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE06E8D1-31FC-4D4B-B767-6F55DCE31013}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE06E8D1-31FC-4D4B-B767-6F55DCE31013}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86CCA33B-2D4A-405D-87AD-FBFB4530E96A}
 	EndGlobalSection
 EndGlobal
