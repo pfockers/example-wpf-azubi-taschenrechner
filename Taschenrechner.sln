@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taschenrechner_Own", "Tasch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taschenrechner_Own_MVVM", "Taschenrechner_Own_MVVM\Taschenrechner_Own_MVVM.csproj", "{EE06E8D1-31FC-4D4B-B767-6F55DCE31013}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taschenrechner_Own_MVVM.Test", "Taschenrechner_Own_MVVM.Test\Taschenrechner_Own_MVVM.Test.csproj", "{8983F8D9-513D-4FA8-8B3B-3086EC4164E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{EE06E8D1-31FC-4D4B-B767-6F55DCE31013}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE06E8D1-31FC-4D4B-B767-6F55DCE31013}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE06E8D1-31FC-4D4B-B767-6F55DCE31013}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8983F8D9-513D-4FA8-8B3B-3086EC4164E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8983F8D9-513D-4FA8-8B3B-3086EC4164E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8983F8D9-513D-4FA8-8B3B-3086EC4164E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8983F8D9-513D-4FA8-8B3B-3086EC4164E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
