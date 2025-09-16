@@ -12,14 +12,14 @@ namespace Taschenrechner_Own_MVVM.Model
     {
         #region Methods
 
-        public double Calculate(double zahl1, double zahl2, string op)
+        public double Calculate(double numberOne, double numberTwo, string op)
         {
             return op switch
             {
-                "+" => zahl1 + zahl2,
-                "-" => zahl1 - zahl2,
-                "*" => zahl1 * zahl2,
-                "/" => zahl2 != 0 ? zahl1 / zahl2 : throw new DivideByZeroException(),
+                "+" => numberOne + numberTwo,
+                "-" => numberOne - numberTwo,
+                "*" => numberOne * numberTwo,
+                "/" => numberTwo != 0 ? numberOne / numberTwo : throw new DivideByZeroException(),
                 _ => 0
             };
         }

@@ -6,7 +6,7 @@
 //  writing by an officer of ROSEN. All Rights Reserved.
 // </copyright>
 
-namespace Taschenrechner_Own_MVVM.ViewModel
+namespace Taschenrechner_Own_MVVM.Commands
 {
     using System.Windows.Input;
 

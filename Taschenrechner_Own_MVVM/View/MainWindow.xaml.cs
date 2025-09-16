@@ -8,12 +8,18 @@
 
 namespace Taschenrechner_Own_MVVM
 {
-    using System.Windows;
-
     /// <summary>
-    /// Interaction logic for App.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class App : Application
+    public partial class MainWindow
     {
+        #region Constructors
+
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        #endregion
     }
 }
